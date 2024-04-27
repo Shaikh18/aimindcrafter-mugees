@@ -1,0 +1,121 @@
+/* ==========================================================================           
+ *
+ *    v3.8 Update
+ *
+ * ========================================================================== */
+ 
+ .chat-sidebar-container-special {
+   width: 400px!important;
+ }
+
+ #url-process-button {
+  position: absolute;
+  right: 7px;
+  top: 8px;
+  font-size: 10px;
+  user-select: none;
+  background-color: $btnPrimaryBGColor;
+  color: #FFF;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.8rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &:hover {
+    background-color: #1e1e2d;
+  }
+ }
+
+ #url-link {
+  border-radius: 1rem;
+ }
+
+ #upload-csv-button,
+ #upload-pdf-button {
+  text-transform: none!important;
+ }
+
+ .chat-small {
+  width: 220px!important;
+ }
+
+.block-display {
+  display: none!important;
+ }
+
+ .chat-title-special {
+  width: 290px!important;
+ }
+
+ .chat-sidebar-message {
+  overflow: hidden;
+ }
+
+ .chat-url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 290px;
+  z-index: 10;
+
+  &:hover {
+    color: #007bff!important;
+  }
+ }
+
+ .loading {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading .spacer {
+  margin-right: 2px;
+}
+
+.loading span {
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.loading span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 0.2;
+  }
+  20% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.2;
+  }
+}
+
+.btn-keywords {
+  transition: all .3s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(29, 39, 59, 0.25);
+  }
+}
+
+.file-drop-border {
+  border: 1px dashed #c5c5d2;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+}

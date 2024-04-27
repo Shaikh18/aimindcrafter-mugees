@@ -1,0 +1,285 @@
+/* ==========================================================================           
+ *
+ *    MAIN SECTION STYLES
+ *
+ * ========================================================================== */
+
+ #main-wrapper {
+
+    background: rgba(14, 7, 31, 1);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/files/bg.webp);
+    position: relative;
+
+    .fixed-height {
+      height: 0.5em;
+    }
+
+    /*------------------------------------------*/
+    /*    Navigation
+    /*------------------------------------------*/
+
+    .navbar {
+        background: transparent;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 50px;
+        z-index: 100;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        -webkit-transition: all ease-in 0.2s;
+        transition: all ease-in 0.2s;
+        border-bottom: 1px solid rgba(255,255,255, 0.1);
+    }
+    
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: auto;
+    }
+
+    .frontend-buttons {
+      margin-left: 4rem;
+    }
+    
+    #login-button {
+      color: #fff;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+
+        &:hover, &:focus {
+            color: $primaryTextColor;
+        }
+    }
+
+    #top-main-button {
+      display: inline-flex;
+      background: #0c0c0d;
+      border: none!important;
+    }
+
+    .icon {
+      i {
+        color: #000;
+      }
+    }
+
+    .navbar-nav li.nav-item a.nav-link {
+        padding: 0px 15px;
+        color: #FFF;
+        text-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+        font-size: 14px;
+
+        .active {
+          color: $primaryTextColor!important;
+        }
+
+        &:hover, &:focus {
+            color: $primaryTextColor;
+        }
+    }
+
+    .dark-color {
+      color: $primaryTextColor!important;
+    }
+
+    #login-buttons {
+      width: auto;
+    }
+
+    .navbar-nav li.nav-item a.active {    
+        color: $primaryTextColor!important;      
+    }
+
+    .action-button {
+        background: $primaryTextActiveColor;
+        outline: none;
+        text-decoration: none;
+        min-width: 125px;
+        color: #FFF;
+        padding: .375rem .75rem;
+        border-radius: 35px;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        box-shadow: 0 1px 3px 0 rgb(50 50 50 / 20%), 0 2px 1px -1px rgb(50 50 50 / 12%), 0 1px 1px 0 rgb(50 50 50 / 14%);
+
+        &:hover, &:focus {
+            background: $primaryTextColor;
+        }
+    }
+
+    .register-button, 
+    .dashboard-button {
+      background: $primaryTextColor!important;
+
+      &:hover, &:focus {
+        background: #ffab00!important;
+       
+      }
+    }
+    
+    .minimize-navbar {
+      line-height: 60px;    
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+      li.nav-item a.active {    
+        color: $primaryTextActiveColor!important;      
+      }
+
+      li.nav-item  {
+
+        &:hover, &:focus {
+
+          a.nav-link {
+            color: $primaryTextActiveColor!important;
+          }
+            
+        }
+      }
+
+      .icon {
+
+        span {
+          color: $primaryTextColor;
+        }
+
+        i {
+          color: $primaryTextActiveColor;
+        }
+
+        &:hover {
+          span {
+            color: $primaryTextActiveColor;
+          }
+
+          i {
+            color: $primaryTextColor;
+          }
+        }
+      }
+
+      #login-button {
+        color: #1e1e2d;
+  
+          &:hover, &:focus {
+              color: $primaryTextActiveColor;
+          }
+      }
+    }
+    
+    #main-background {
+      background-color: transparent;
+      background-image: linear-gradient(85deg, rgba(215, 107, 54) 0%, rgba(249, 164, 1, 0.85) 100%);
+    }
+
+    .text-container {
+
+        h1 {
+          color: #FFF;
+          line-height: 1em;
+          margin: 0;
+          font-weight: 800;
+          font-size: 70px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        h6 {
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            color: #FFF;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            color: #FFF;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .curve-box {
+      position: absolute;
+      pointer-events: none;
+      right: 0;
+      bottom: -2px;
+      left: 0; 
+    
+      .curve {
+        fill: #fff;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .happy-customers {
+      color: #8d5200;
+      background-color: #ffd900;
+      border-radius: 100px;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 5px 15px 5px 5px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1em;
+      display: flex;
+      box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.2), 0 2px 1px -1px rgba(50, 50, 50, 0.12), 0 1px 1px 0 rgba(50, 50, 50, 0.14);
+
+      .customer-avatars {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-right: 8px;
+        display: flex;
+
+        .small-avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          box-shadow: 0 0 0 2px #fff;
+        }
+
+        .small-avatar.overlap {
+          margin-right: -12px;
+        }
+      }
+    }
+ }
+
+ #frontend-local {
+  padding-top: 0;
+
+  .icon {
+    &:hover {
+      span {
+        color: $primaryTextColor;
+      }
+    }
+  }
+  .dropdown-menu {
+    line-height: 15px;
+  }
+
+  .dropdown-menu-arrow.dropdown-menu-right:before,
+  .dropdown-menu-arrow.dropdown-menu-right:after {
+    content: none;
+  }
+}
+
+ .special-action-button {
+    box-shadow: 0 5px 10px #3c429660!important;
+    border-radius: 35px!important;
+    transition: all .3s ease!important;
+
+    &:focus, &:hover {
+      box-shadow: $special-shadow!important;
+    }
+  }
+
+  .vertical-center {
+    align-items: center;
+  }

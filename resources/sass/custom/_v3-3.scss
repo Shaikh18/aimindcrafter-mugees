@@ -1,0 +1,69 @@
+/* ==========================================================================           
+ *
+ *    v3.3 AI Image Styles
+ *
+ * ========================================================================== */
+ #image-side-space {
+
+	#sd-image-to-image,
+   #sd-image-upscale,
+   #sd-image-masking,
+   #sd-multi-prompting,
+   #openai-image-masking,
+   #openai-image-variations {
+		display: none;
+	}
+
+   .image-upload-box {
+      position: relative;
+      padding: 2rem 1rem;
+
+      .image-select {
+         display: block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0);
+         opacity: 0;
+         outline: none;
+         cursor: pointer;
+         z-index: 2;
+      }
+   }
+
+   #source-image,
+   #source-image-scale,
+   #source-image-mask,
+   #source-image-mask-target,
+   #source-image-mask-openai,
+   #source-image-variations {
+      max-height: 300px;
+      width: auto;
+      display: none;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+   }
+}
+
+.multi-prompt-input {
+
+   .form-control {
+      height: 48px;
+      line-height: 48px;
+      padding: 0 20px;
+      background-color: #FFF !important;
+      border-radius: 50vh;
+      border-color: #f5f9fc;
+      width: 100%;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   }
+
+   .delete-prompt-input {
+      &:hover, &:focus {
+         color: red;
+      }
+   }
+}

@@ -1,0 +1,213 @@
+/* ==========================================================================           
+ *
+ *    Chat Styles
+ *
+ * ========================================================================== */
+.chat-card-header {
+	min-height: 5rem;
+}
+
+.chat-sidebar-search {
+	max-height: 79px;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.2rem 1.5rem;
+    color: #333;
+    display: block;
+    position: relative;
+	min-height: 3.5rem;
+	border-bottom: 1px solid #ebecf1;
+
+	.chat-search-icon {
+		position: absolute;
+		right: 1rem;
+		top: 35%;
+	}
+}
+
+.chat-sidebar-search-small {
+	max-height: 79px;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.2rem 1.5rem;
+    color: #333;
+    display: block;
+    position: relative;
+	min-height: 3.5rem;
+
+	.chat-search-icon {
+		position: absolute;
+		right: 1rem;
+		top: 35%;
+	}
+}
+
+#chat-search {
+	border-radius: 1rem;
+}
+
+.chat-controllers {
+	align-self: flex-end;
+    gap: 1rem!important;
+    display: flex;
+	
+	#message {
+		background-color: transparent;
+		border: none;
+	}
+
+	.chat-button {
+		font-size: 12px;
+		min-width: 100px;
+		padding: 0.6rem 10px;
+		border-radius: 35px;
+		color: #fff;
+		background-color: $primaryTextActiveColor;
+		border-color: $primaryTextActiveColor;
+		box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.2), 0 2px 1px -1px rgba(50, 50, 50, 0.12), 0 1px 1px 0 rgba(50, 50, 50, 0.14);
+
+		&:hover {
+			background-color: $primaryTextColor;
+			border-color: $primaryTextColor;
+		}
+	}
+
+	.chat-button-icon {
+		color: $primaryTextActiveColor;
+		border-radius: 50%;
+		padding: 0.5rem 0.8rem;
+		width: 43px;
+		background-color: #E1F0FF;
+		outline: none!important;
+		text-decoration: none!important;
+
+		&:hover {
+			color: $primaryTextColor;
+			background-color: #D1D3E0;
+		}
+	}
+
+	.special-action-color {
+		border-color: #E1F0FF;
+		color: $primaryTextActiveColor;
+		background-color: #E1F0FF;
+		box-shadow: none;
+
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
+
+#new-chat-button {
+	padding: 0.6rem 10px;
+	text-transform: none;
+}
+
+
+
+
+
+/* ==========================================================================           
+ *
+ *    Upgrade Styles
+ *
+ * ========================================================================== */
+ #upgrade-form {
+	h1 {
+		font-weight: 800;
+		font-size: 20px;
+	}
+
+	#audio-format .label-control {
+		font-size: 13px;
+		font-weight: normal;
+	 }
+
+	 #webm-format .label-control {
+		line-height: 1.5!important;
+	 }
+
+	 #audio-format .input-control {
+		background-color: #000;
+	 }
+ }
+
+ .changelogs {
+	h5 {
+		margin-top: 3rem;
+		font-weight: 800;
+	}
+
+	.changelog {
+
+		.changelog-description {
+			li {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.version-name {
+			background: #D1D3E0;
+			color: #1e1e2d;
+			font-size: 14px;
+			padding: 5px 15px;
+			border-radius: 15px;
+			font-weight: 600;
+		}
+
+		.version-new {
+			background: rgba(0, 188, 126, 0.1);
+    		color: #00bc7e;
+			font-size: 10px;
+			text-transform: uppercase;
+			padding: 2px 15px;
+			border-radius: 10px;
+			font-weight: 600;
+		}
+
+		.version-update {
+			background: #E1F0FF;
+			color: #007bff;
+			font-size: 10px;
+			text-transform: uppercase;
+			padding: 2px 15px;
+			border-radius: 10px;
+			font-weight: 600;
+		}
+
+		.version-fix {
+			background: #F8D7DA;
+    		color: #B02A37;
+			font-size: 10px;
+			text-transform: uppercase;
+			padding: 2px 15px;
+			border-radius: 10px;
+			font-weight: 600;
+		}
+	}
+}
+
+.image-view-outer {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.widget-banner-image {
+	height: auto;
+	width: 100px;
+	clear: both;
+	display: block;
+	position: relative;
+  }
+
+.tool-banner-image {
+	height: auto;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+ 
+

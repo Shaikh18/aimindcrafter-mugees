@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>c5n.us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA4OCAxMDIuMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgODggMTAyLjI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDY4MkI0O30KCS5zdDF7ZmlsbDojMzFCN0U5O30KCS5zdDJ7ZmlsbDpub25lO30KPC9zdHlsZT4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSI4OCw1Mi42IDg4LDUyLjYgMzguNCwzIDI0LjIsMTcuMiA1OS43LDUyLjYgMjQuMyw4OCAzOC40LDEwMi4yIAkJCSIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSI4NSw0OS42IDg1LDQ5LjYgMzUuNCwwIDIxLjIsMTQuMiA1Ni43LDQ5LjYgMjEuMyw4NSAzNS40LDk5LjIgCQkJIi8+CgkJPC9nPgoJPC9nPgoJPGxpbmUgY2xhc3M9InN0MiIgeDE9IjQwLjMiIHkxPSIxMDMuOCIgeDI9IjkwLjEiIHkyPSI1NC4yIi8+Cgk8Zz4KCQk8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxMC41LDc0LjQgMTQuMSw3OCA0Mi40LDQ5LjYgMzguNyw0NS44IAkJIi8+CgkJPHBvbHlsaW5lIGNsYXNzPSJzdDEiIHBvaW50cz0iMzguNyw0NS45IDE0LjIsMjEuMyAwLDM1LjQgMTQuMiw0OS42IDAsNjMuOCAxMC42LDc0LjQgCQkiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html {
+            font-size: 10px;
+            font-family: 'Open Sans', sans-serif;
+            color: #1d2a3b;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .container.card {
+            margin-top: 12.3rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: -5px -4px 47px 3px rgba(198, 198, 198, 0.3);
+            text-align: center;
+            padding: 3.6rem;
+            /* padding-bottom: 3.6rem; */
+        }
+        .title-main {
+            font-size: 3.6rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 2.1rem;
+        }
+        .main-image svg {
+            max-width: 61rem;
+            margin-bottom: 2rem;
+        }
+
+        .subheading{
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+
+        .card .text {
+            font-size: 13px;
+            letter-spacing: 0.26px;
+
+        }
+        footer {
+            color: #b1b1b1;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.7rem;
+        }
+        footer .logo svg {
+            width: 145px;
+            padding-left: 11px;
+        }
+        footer .left-side {
+            display: flex;
+            align-items: center;
+        }
+        /* Medias */
+        @media screen and (max-width: 1024px){
+            .container {max-width: 90%;}
+        @media screen and (max-width: 768px){
+            html {font-size: 7px;}
+            .container {
+                max-width: 90%;}
+            .container.card {margin-top: 6rem;}
+            .card .text { font-size: 1.6rem;}
+        } 
+        @media screen and (max-width: 480px){
+            html {font-size: 5.7px;}
+            .container {max-width: 95%;}
+            .title-main {font-size: 6.6vw;}
+            /* .container.card {margin-top: 2rem;} */
+            .subheading{font-size: 13px;}
+            .card .text { font-size: 12px;}
+            footer {flex-direction: column;}
+        } 
+        }
+    </style>
+</head>
+<body>
+    <section id="default-card" class="default-card">
+        <div class="container card">
+            <h1 class="title-main">c5n.us</h1>
+            <p class="subheading">Something amazing will be constructed here...</p>
+            <div class="main-image">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox=" 0 90 500 260"  xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            fill: #FFFFFF;
+                        }
+
+                        .st1 {
+                            fill: #6CDD6C;
+                        }
+
+                        .st2 {
+                            fill: #50AA50;
+                        }
+
+                        .st3 {
+                            fill: #106797;
+                        }
+
+                        .st4 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #A3D5E9;
+                        }
+
+                        .st5 {
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            fill: #106797;
+                        }
+
+                        .st6 {
+                            fill: #A3D5E9;
+                        }
+
+                        .st7 {
+                            fill: #405B91;
+                        }
+
+                        .st8 {
+                            fill: #B6D0FB;
+                        }
+
+                        .st9 {
+                            fill: #8AB436;
+                        }
+
+                        .st10 {
+                            fill: #C1E9F4;
+                        }
+
+                        .st11 {
+                            fill: #415B91;
+                        }
+                    </style>
+                    <g id="BACKGROUND">
+                        <rect class="st0" width="500" height="500" />
+                    </g>
+                    <g id="OBJECTS">
+                        <g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <path class="st1" d="M317.7,334.6c-0.5-1.6-1.8-3.1-3.5-3.6s-4,0.3-4.5,1.9c-1.6-1.2-4.1-0.3-5.4,1.2c-2.1,2.4-0.5,6.4-0.1,6.6
+                                                        c0.4,0.3,1.4,0.2,1.4,0.2l15.7-0.1c0,0,2.9-0.2,4.2-0.7c2.7-1,4.5-5.1,2.8-7.2c-1.2-1.4-3.5-1.7-5.4-1.2
+                                                        C320.9,332.4,319.1,333.4,317.7,334.6" />
+                                    </g>
+                                    <g>
+                                        <path class="st2"
+                                            d="M305.3,341.5c-0.4,0-1.1,0-1.5-0.3c-0.6-0.5-2.2-4.7,0-7.3c0.9-1.1,2.3-1.8,3.7-2c0.7-0.1,1.3,0,1.9,0.3
+                                                        c0.3-0.5,0.9-1,1.5-1.3c1-0.5,2.3-0.6,3.4-0.3c1.6,0.5,2.9,1.6,3.6,3.2c1.5-1.1,3.2-2,4.8-2.4c1.9-0.5,4.5-0.3,5.9,1.4
+                                                        c0.8,1,1,2.4,0.5,4c-0.6,1.8-2,3.4-3.5,4c-1.4,0.5-4.2,0.7-4.4,0.7l-15.7,0.1C305.4,341.5,305.4,341.5,305.3,341.5z
+                                                         M307.9,332.8c-0.1,0-0.2,0-0.3,0c-1,0.1-2.2,0.7-3,1.6c-1.8,2.1-0.5,5.7-0.2,6c0.1,0,0.6,0.1,1,0.1l15.7-0.1
+                                                        c0,0,2.8-0.2,4-0.6c1.2-0.4,2.4-1.8,2.9-3.3c0.4-1.3,0.3-2.4-0.3-3.2c-1.1-1.3-3.3-1.5-4.8-1c-1.6,0.5-3.4,1.4-5,2.7
+                                                        c-0.1,0.1-0.3,0.1-0.5,0.1c-0.2,0-0.3-0.2-0.4-0.3c-0.6-1.6-1.7-2.9-3.2-3.3c-0.8-0.2-1.8-0.2-2.6,0.2
+                                                        c-0.7,0.3-1.1,0.8-1.3,1.3c-0.1,0.1-0.2,0.3-0.3,0.3c-0.2,0-0.3,0-0.5-0.1C308.9,332.9,308.4,332.8,307.9,332.8z" />
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path cl

@@ -1,0 +1,110 @@
+/* ==========================================================================           
+ *
+ *    v2.9 Styles
+ *
+ * ========================================================================== */
+
+ .templates-nav-header {
+	margin-bottom: 1rem;
+ }
+
+ .chat-nav-menu {
+	margin-bottom: 1.5rem;
+ }
+
+ .templates-nav-menu .template-nav-menu-inner {
+	background-color: #fff;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ }
+
+ .search-template .input-box .form-control {
+	height: 54px;
+	margin-bottom: 1rem;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ }
+
+ #chat-search-panel #search-template {
+	margin-bottom: 0;
+ }
+
+ .super-strong {
+	font-weight: 900!important;
+ }
+
+
+ /* ==========================================================================           
+ *
+ *    Chat Prompts
+ *
+ * ========================================================================== */
+ .prompts-panel {
+	.prompt-boxes {
+
+		.card {
+			min-height: 170px;
+			margin-top: 0.5rem;
+		}
+
+		&:hover, &:focus {
+			cursor: pointer;
+
+			.card {
+				background-color: $body-background;
+
+				h6 {
+					color: $primaryTextActiveColor;
+				}
+			}			
+		}
+	}
+ }
+
+ .msg-text {
+	a {
+		color: $primaryTextActiveColor;
+	
+		&:hover, &:focus {
+			color: #ff9d00;
+		}
+	 }
+
+	 p {
+		margin-bottom: 0;
+		line-height: 25px;
+	 }
+
+	 pre {
+		position: relative;
+		border-radius: 0.5rem;
+
+		.copy-code {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+	 }
+
+	 
+ }
+
+ .message-bubble {
+	.copy {
+		display: none;
+		position: absolute;
+		right: 5px;
+		background: #fff;
+		padding: 10px;
+		border-radius: 50%;
+		bottom: -15px;
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+		transition: all 1s ease;
+	 }
+
+	 &:hover, &:focus {
+		.copy {
+			display: block;
+			transition: all 1s ease;
+		}
+	 }
+ }
+ 

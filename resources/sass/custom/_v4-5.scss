@@ -1,0 +1,42 @@
+/* ==========================================================================           
+ *
+ *    v4.5 Update
+ *
+ * ========================================================================== */
+ .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered {
+   flex-wrap: nowrap;
+   width: 100%;
+    font-size: 12px;
+    background-color: #f5f9fc;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    line-height: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    background-size: 10px 10px;
+ }
+
+ .select2-container--bootstrap-5 .select2--small.select2-selection {
+   padding: 0;
+   border: none;
+ }
+
+ .select2-container--bootstrap-5 .select2--small.select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  margin-bottom: 0;
+ }
+
+ .select2-container--bootstrap-5 .select2--small.select2-selection--multiple .select2-selection__rendered .select2-selection__choice,
+ .select2-container--bootstrap-5 .select2--small.select2-dropdown .select2-results__options .select2-results__option, .select2-container--bootstrap-5 .select2--small.select2-dropdown .select2-search .select2-search__field {
+  font-size: 12px;
+ }
+
+ .product-field {
+  border: 1px solid #ebecf1;
+    padding: 1rem;
+    border-radius: 1rem;
+ }
+
+ .brand-details {
+  display: none;
+ }

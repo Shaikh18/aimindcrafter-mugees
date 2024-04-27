@@ -1,0 +1,205 @@
+/* ==========================================================================           
+ *
+ *    v4.2 Update
+ *
+ * ========================================================================== */
+ .view-action-button,
+ .delete-action-button,
+ .edit-action-button {
+  transition: all .3s;
+
+  &:hover {
+    transform: translateY(-3px);
+	  box-shadow: 0 0.5rem 1rem rgba(29, 39, 59, 0.15);
+  }
+ }
+
+ .download-action-button {
+  transition: all .3s;
+  &:hover {
+    color: #1e1e2d;
+    transform: translateY(-3px);
+	  box-shadow: 0 0.5rem 1rem rgba(29, 39, 59, 0.15);
+  }
+ }
+
+ .green-audio-player .holder .play-pause-btn {
+  margin-bottom: 1.5rem;
+ }
+
+ .sample-audio-player {
+  position: absolute;
+    right: 0;
+    top: -5px;
+
+    i {
+      font-size: 10px;
+      width: 25px;
+      height: 25px;
+    }
+ }
+
+ .custom-voice-select {
+  .nav-link.dropdown-toggle h6 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .nav-link.dropdown-toggle {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    height: 42px;
+    background: #f5f9fc;
+    color: #1e1e2d;
+  }
+
+  .dropdown-toggle::after {
+    position: absolute;
+    right: 1.5rem;
+  }
+
+ .dropdown .dropdown-menu {
+    left: 0 !important;
+    transform: none !important;
+    max-height: 450px !important;
+    top: 52px !important;
+    border: 1px solid rgba(203, 213, 224, 0.7) !important;
+    border-radius: 0.5rem;
+    overflow-y: scroll !important;
+    padding: 0 0 !important;
+    width: 100%;
+    padding-left: 4px !important;
+  }
+ }
+
+.video-settings-wrapper {
+ .range {
+    position: relative;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+  }
+.range .range_in {
+    position: relative;
+    width: 100%;
+  }
+   .range .range_in input {
+    display: block;
+    height: 4px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    border: none;
+    background-color: #f5f9fc;
+  }
+.range .range_in .slider {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -2px;
+  pointer-events: none;
+  background: $primaryTextActiveColor;
+  }
+ .range .range_in .slider:before {
+    width: 14px;
+    height: 14px;
+    background: $primaryTextActiveColor;
+    cursor: pointer;
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 50%;
+    margin-top: -7px;
+    content: "";
+    z-index: 2;
+  }
+.range .range_in .slider:after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  border-radius: 5px 0 0 5px;
+  }
+ .range .range_in .slider, #image-settings-wrapper .image-settings .range .range_in input {
+    display: block;
+    height: 4px;
+    border-radius: 5px;
+  }
+ .range .range_in input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: $primaryTextActiveColor;
+    cursor: pointer;
+    border-radius: 100%;
+    opacity: 0;
+  }
+ .range .range_in input::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: $primaryTextActiveColor;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 3;
+    opacity: 0;
+  }
+.range .value {
+    flex: auto;
+    width: 40px;
+    text-align: right;
+    padding-left: 10px;
+    font-size: 12px;
+  }
+}
+
+#image-drop-box {
+  #source-image-variations {
+    max-height: 300px;
+    width: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+
+  }
+}
+
+#video-image-counter {
+  p {
+    position: absolute;
+    right: 2rem;
+  }
+}
+
+.video-processing {
+  background: #D1D3E0;
+  color: #1e1e2d;
+}
+
+.video-completed {
+  background: rgba(0, 188, 126, 0.1);
+  color: #00bc7e;
+}
+
+.video-failed {
+  background: #FFE2E5;
+    color: #ff0000;
+}
+
+.video-image-view img {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.voice-custom {
+  background: rgba(0, 188, 126, 0.1);
+  color: #00bc7e;
+}
