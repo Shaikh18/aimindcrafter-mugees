@@ -9,28 +9,28 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link scroll active" href="{{ url('/') }}/#main-wrapper">{{ __('Home') }} <span class="sr-only">(current)</span></a>
-                    </li>	
+                    </li>
                     @if (config('frontend.features_section') == 'on')
                         <li class="nav-item">
                             <a class="nav-link scroll" href="{{ url('/') }}/#features-wrapper">{{ __('Features') }}</a>
                         </li>
-                    @endif	
+                    @endif
                     @if (config('frontend.pricing_section') == 'on')
                         <li class="nav-item">
                             <a class="nav-link scroll" href="{{ url('/') }}/#prices-wrapper">{{ __('Pricing') }}</a>
                         </li>
-                    @endif							
+                    @endif
                     @if (config('frontend.faq_section') == 'on')
                         <li class="nav-item">
                             <a class="nav-link scroll" href="{{ url('/') }}/#faq-wrapper">{{ __('FAQs') }}</a>
                         </li>
-                    @endif	
+                    @endif
                     @if (config('frontend.blogs_section') == 'on')
                         <li class="nav-item">
                             <a class="nav-link scroll" href="{{ url('/') }}/#blog-wrapper">{{ __('Blogs') }}</a>
                         </li>
-                    @endif										
-                </ul>                    
+                    @endif
+                </ul>
             </div>
             @if (Route::has('login'))
                     <div id="login-buttons">
@@ -47,7 +47,7 @@
                                                 <div>
                                                     <span class="font-weight-normal fs-12">{{ $language['display'] }}</span>
                                                 </div>
-                                            </a>                                        
+                                            </a>
                                         @endif
                                     @endforeach
                                 </div>

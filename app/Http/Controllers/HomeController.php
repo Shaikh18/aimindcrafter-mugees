@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PageBuilder;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -23,19 +24,29 @@ use Carbon\Carbon;
 
 class HomeController extends Controller
 {
+    public function pageBuilder($slug)
+    {
+        $information = $this->metadataInformation();
+        $page_builder = PageBuilder::where('slug', $slug)->firstOrFail();
+        return view('admin.page-builder.show', [
+            'information' => $information,
+            'title' => $page_builder->title,
+            'htmlContent' => $page_builder->description
+        ]);
+    }
     /**
      * Show home page
      */
     public function index()
     {
 
-        $review_exists = Review::count();   
-        $review_second_exists = Review::where('row', 'second')->count();   
+        $review_exists = Review::count();
+        $review_second_exists = Review::where('row', 'second')->count();
         $reviews = Review::all();
 
         $information = $this->metadataInformation();
 
-        $faq_exists = Faq::count();        
+        $faq_exists = Faq::count();
         $faqs = Faq::where('status', 'visible')->get();
 
         $blog_exists = Blog::count();
@@ -51,13 +62,13 @@ class HomeController extends Controller
         $lifetime_subscriptions = SubscriptionPlan::where('status', 'active')->where('payment_frequency', 'lifetime')->get();
         $prepaids = PrepaidPlan::where('status', 'active')->get();
 
-        $other_templates = Template::where('status', true)->orderBy('group', 'desc')->get();   
-        $custom_templates = CustomTemplate::where('status', true)->orderBy('group', 'desc')->get();   
-        
+        $other_templates = Template::where('status', true)->orderBy('group', 'desc')->get();
+        $custom_templates = CustomTemplate::where('status', true)->orderBy('group', 'desc')->get();
+
         $check_categories = Template::where('status', true)->groupBy('group')->pluck('group')->toArray();
         $check_custom_categories = CustomTemplate::where('status', true)->groupBy('group')->pluck('group')->toArray();
         $active_categories = array_unique(array_merge($check_categories, $check_custom_categories));
-        $categories = Category::whereIn('code', $active_categories)->orderBy('name', 'asc')->get(); 
+        $categories = Category::whereIn('code', $active_categories)->orderBy('name', 'asc')->get();
 
         $steps = FrontendStep::orderBy('order', 'asc')->get();
         $tools = FrontendTool::where('status', true)->get();
@@ -70,9 +81,9 @@ class HomeController extends Controller
 
     /**
      * Display terms & conditions page
-     * 
+     *
      */
-    public function termsAndConditions() 
+    public function termsAndConditions()
     {
         $information = $this->metadataInformation();
 
@@ -92,9 +103,9 @@ class HomeController extends Controller
 
     /**
      * Display privacy policy page
-     * 
+     *
      */
-    public function privacyPolicy() 
+    public function privacyPolicy()
     {
         $information = $this->metadataInformation();
 
@@ -114,7 +125,7 @@ class HomeController extends Controller
 
     /**
      * Frontend show blog
-     * 
+     *
      */
     public function blogShow($slug)
     {
@@ -141,7 +152,7 @@ class HomeController extends Controller
 
     /**
      * Frontend show contact
-     * 
+     *
      */
     public function contactShow()
     {
@@ -153,7 +164,7 @@ class HomeController extends Controller
 
     /**
      * Frontend show about us
-     * 
+     *
      */
     public function aboutUs()
     {
@@ -178,7 +189,7 @@ class HomeController extends Controller
 
     /**
      * Frontend contact us form record
-     * 
+     *
      */
     public function contactSend(Request $request)
     {
@@ -204,12 +215,12 @@ class HomeController extends Controller
                 try {
 
                     Mail::to(config('mail.from.address'))->send(new ContactFormEmail($request));
- 
+
                     if (Mail::flushMacros()) {
                         toastr()->error(__('Sending email failed, please try again.'));
                         return redirect()->back();
                     }
-                    
+
                 } catch (\Exception $e) {
                     toastr()->error(__('Sending email failed, please contact support team.'));
                     return redirect()->back();
@@ -222,13 +233,13 @@ class HomeController extends Controller
                 toastr()->error(__('Google reCaptcha Validation has Failed'));
                 return redirect()->back();
             }
-        
+
         } else {
 
             try {
 
                 Mail::to(config('mail.from.address'))->send(new ContactFormEmail($request));
- 
+
                 if (Mail::flushMacros()) {
                     toastr()->error(__('Sending email failed, please try again.'));
                     return redirect()->back();
@@ -241,13 +252,13 @@ class HomeController extends Controller
 
             toastr()->success(__('Email was successfully sent'));
             return redirect()->back();
-        }  
+        }
     }
 
 
     /**
      * Verify reCaptch for frontend contact us page (if enabled)
-     * 
+     *
      */
     private function reCaptchaCheck($recaptcha)
     {
